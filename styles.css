@@ -1,0 +1,65 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2em;
+    height: 100vh;
+}
+
+.form-section, .results-section {
+    flex: 1;
+    margin: 1em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.results-section {
+    overflow-y: auto;
+}
+
+label, input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+}
+
+li a {
+    color: #fff;
+    text-decoration: none;
+    word-break: break-all;  /* Breaks the link into multiple lines if it's too long */
+    overflow-wrap: break-word;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    display: none; /* Initially hidden */
+    margin: 0 auto; /* Center the loader */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

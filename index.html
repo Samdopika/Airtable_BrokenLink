@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Broken Links in Airtable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<h2>Check Broken Links in Airtable</h2>
+    <div class="dashboard">
+        <div class="form-section">
+            <h2>Input Details</h2>
+            <form id="inputForm">
+                <label for="apiKey">API Key:</label>
+                <input type="text" id="apiKey" required>
 
-<form id="inputForm">
-    <label for="apiKey">API Key:</label>
-    <input type="text" id="apiKey" required>
+                <label for="baseId">Base ID:</label>
+                <input type="text" id="baseId" required>
 
-    <label for="baseId">Base ID:</label>
-    <input type="text" id="baseId" required>
+                <label for="tableName">Table Name:</label>
+                <input type="text" id="tableName" required>
 
-    <label for="tableName">Table Name:</label>
-    <input type="text" id="tableName" required>
+                <label for="columnName">Column Name:</label>
+                <input type="text" id="columnName" required>
 
-    <label for="columnName">Column Name:</label>
-    <input type="text" id="columnName" required>
+                <input type="submit" value="Check Links">
+            </form>
+        </div>
 
-    <input type="submit" value="Check Links">
-</form>
+        <div class="results-section">
+            <h2>Broken Links</h2>
+            <!-- Add this inside your HTML where you want the loader to appear -->
+            <div id="loader" class="loader"></div>
 
-<h3>Broken Links:</h3>
-<ul id="brokenLinksList">
-    <!-- Broken links will be appended here by the script -->
-</ul>
+            <ul id="brokenLinksList">
+                <!-- Broken links will be appended here by the script -->
+            </ul>
+        </div>
+    </div>
 
 </body>
+
 </html>
